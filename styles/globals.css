@@ -1,26 +1,49 @@
-html,
-body {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+:root {
+  --clr-primary: #4643e1;
+  --clr-primary-light: #f5f3ff;
+
+  --fixed-width: 95%;
+  --fixed-width-in: 70%;
+
+  --clr-text-para: #808080;
+}
+/* Font sizes yet to be decided */
+h1 {
+  font-size: 4rem;
+  line-height: 140%;
+}
+h2 {
+  line-height: 140%;
+  font-size: 2.5rem;
+}
+h3 {
+  line-height: 140%;
+  font-size: 2rem;
+}
+h4 {
+  line-height: 140%;
+  font-size: 1.2rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+p {
+  line-height: 26px;
+  color: var(--clr-text-para);
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --fixed-width-in: 90%;
   }
 }
