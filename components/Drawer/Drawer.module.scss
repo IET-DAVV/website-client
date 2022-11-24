@@ -10,19 +10,17 @@
 	transition: 0.5s;
 	padding-top: 60px;
 	transition: all 0.5s ease-in-out;
-}
-
-.sidenav .lnk {
-	padding: 14px 8px 14px 36%;
-	text-decoration: none;
-	font-size: 28px;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
-}
-
-.sidenav .lnk:hover {
-	color: #f1f1f1;
+	.lnk {
+		padding: 14px 8px 14px 36%;
+		text-decoration: none;
+		font-size: 28px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+	.lnk:hover {
+		color: #f1f1f1;
+	}
 }
 
 .btn {
@@ -36,28 +34,28 @@
 	.sidenav {
 		padding-top: 15px;
 		width: 50%;
+		.lnk {
+			font-size: 24px;
+			padding: 14px 8px 14px 39%;
+		}
 	}
 	.btn {
 		margin-left: 80%;
 		margin-top: -1rem;
-	}
-	.sidenav .lnk {
-		font-size: 24px;
-		padding: 14px 8px 14px 39%;
 	}
 }
 @media screen and (max-width: 450px) {
 	.sidenav {
 		padding-top: 15px;
 		width: 100%;
+		.lnk {
+			font-size: 22px;
+			padding: 14px 8px 14px 42%;
+		}
 	}
 	.btn {
 		margin-left: 80%;
 		margin-top: -1rem;
-	}
-	.sidenav .lnk {
-		font-size: 22px;
-		padding: 14px 8px 14px 42%;
 	}
 }
 
@@ -70,4 +68,11 @@
 	font-weight: 800;
 	cursor: pointer;
 	position: relative;
+}
+.closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
 }

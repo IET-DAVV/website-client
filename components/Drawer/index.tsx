@@ -1,36 +1,38 @@
+import clsx from "clsx";
 import Link from "next/link";
 import React from "react";
+import style from "./Drawer.module.scss";
 
 const Drawer = () => {
 	const [open, setOpen] = React.useState(false);
 	return (
 		<>
-			<span onClick={(e) => setOpen(!open)} className="open">
+			<span onClick={(e) => setOpen(!open)} className={style.open}>
 				&#9776; open
 			</span>
-			<div id="mySidenav" className={open ? "sidenav" : "cls"}>
+			<div id="mySidenav" className={open ? style.sidenav : style.cls}>
 				<Link href="javascript:void(0)">
 					<div
-						className={open ? "btn closebtn" : "cls"}
+						className={open ? clsx(style.btn, style.closebtn) : style.cls}
 						onClick={(e) => setOpen(!open)}
 					>
 						&times;
 					</div>
 				</Link>
 				<Link href="/">
-					<div className="lnk">About</div>
+					<div className={style.lnk}>About</div>
 				</Link>
 				<Link href="/">
-					<div className="lnk">About</div>
+					<div className={style.lnk}>About</div>
 				</Link>
 				<Link href="/">
-					<div className="lnk">About</div>
+					<div className={style.lnk}>About</div>
 				</Link>
 				<Link href="/">
-					<div className="lnk">About</div>
+					<div className={style.lnk}>About</div>
 				</Link>
 				<Link href="/">
-					<div className="lnk">About</div>
+					<div className={style.lnk}>About</div>
 				</Link>
 			</div>
 		</>
