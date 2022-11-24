@@ -1,8 +1,12 @@
 import React from 'react'
 
-function Typography() {
+interface Props {
+  children?: string;
+}
+
+const Typography: React.FC<Props> = ({children}) => {
   return (
-    <div>Typography</div>
+    <div>{children}</div>
   )
 }
 
