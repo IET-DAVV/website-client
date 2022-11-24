@@ -1,0 +1,73 @@
+.sidenav {
+	height: 100%;
+	width: 30%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	transition: all 0.5s ease-in-out;
+}
+
+.sidenav .lnk {
+	padding: 14px 8px 14px 36%;
+	text-decoration: none;
+	font-size: 28px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav .lnk:hover {
+	color: #f1f1f1;
+}
+
+.btn {
+	margin-left: 75%;
+	font-size: 4rem;
+	margin-top: -2rem;
+	color: #818181;
+	cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+	.sidenav {
+		padding-top: 15px;
+		width: 50%;
+	}
+	.btn {
+		margin-left: 80%;
+		margin-top: -1rem;
+	}
+	.sidenav .lnk {
+		font-size: 24px;
+		padding: 14px 8px 14px 39%;
+	}
+}
+@media screen and (max-width: 450px) {
+	.sidenav {
+		padding-top: 15px;
+		width: 100%;
+	}
+	.btn {
+		margin-left: 80%;
+		margin-top: -1rem;
+	}
+	.sidenav .lnk {
+		font-size: 22px;
+		padding: 14px 8px 14px 42%;
+	}
+}
+
+.cls {
+	transform: translateX(-100%);
+	transition-duration: 0.5s;
+}
+.open {
+	font-size: larger;
+	font-weight: 800;
+	cursor: pointer;
+	position: relative;
+}
