@@ -1,15 +1,15 @@
 import React from "react";
-import "./Card.module.scss";
+import styles from "./Card.module.scss"
 
 const Card = () => {
   return(
-    <div className="container">
+    <div className={styles.container}>
 
-      <div className="Card-header"><h2>Title</h2></div>
-      <div className="Card-image">
+      <div className={styles.cardHeader}><h2>Title</h2></div>
+      <div className={styles.cardImage}>
         <img src="img" alt='image'/>
       </div>
-      <div className="Card-content">
+      <div className={styles.cardContent}>
        
        </div>
     </div>
