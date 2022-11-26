@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface BasicButtonProps
+export interface IBasicButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   classes?: string[];
