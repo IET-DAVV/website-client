@@ -12,5 +12,5 @@ jobs:
     - uses: actions/first-interaction@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Hi there, looks like it's your first time contributing to the repository, dont't forget to check the CONTRIBUTION.md file in the readme :)"
-        pr-message: "Hi there, looks like it's your first time contributing to the repository, dont't forget to check the CONTRIBUTION.md file in the readme :)"
+        issue-message: "Hi there, looks like it's your first time contributing to the repository, dont't forget to check the [CONTRIBUTIONS.md](https://github.com/IET-DAVV/website-client/blob/master/CONTRIBUTIONS.md) file in the readme :)"
+        pr-message: "Hi there, looks like it's your first time contributing to the repository, dont't forget to check the [CONTRIBUTIONS.md](https://github.com/IET-DAVV/website-client/blob/master/CONTRIBUTIONS.md) file in the readme :)"
