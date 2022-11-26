@@ -1,10 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './Button.module.scss';
-import { BasicButtonProps } from '../interfaces';
+import { IBasicButtonProps } from '../interfaces';
 
 function getClassBasedOnVariant(variant: 'primary' | 'secondary' | 'tertiary') {
-  //Refer to the variant property in the BasicButtonProps interface
+  //Refer to the variant property in the IBasicButtonProps interface
   switch (variant) {
     case 'primary':
       return styles.primary;
@@ -17,12 +17,12 @@ function getClassBasedOnVariant(variant: 'primary' | 'secondary' | 'tertiary') {
   }
 }
 
-interface ButtonWithTextAndIconProps extends BasicButtonProps {
+interface IButtonWithTextAndIconProps extends IBasicButtonProps {
   icon?: React.ReactNode;
   iconPlacement?: 'left' | 'right';
 }
 
-const Button: React.FC<ButtonWithTextAndIconProps> = ({
+const Button: React.FC<IButtonWithTextAndIconProps> = ({
   onClick,
   children,
   type = 'button',
@@ -32,7 +32,6 @@ const Button: React.FC<ButtonWithTextAndIconProps> = ({
   iconPlacement = 'left',
   ...rest
 }) => {
-  console.log({ test: classes, rest, icon });
   return (
     <button
       onClick={onClick}
@@ -63,11 +62,11 @@ const Button: React.FC<ButtonWithTextAndIconProps> = ({
   );
 };
 
-interface IconButtonProps extends Omit<BasicButtonProps, 'children'> {
+interface IIconButtonProps extends Omit<IBasicButtonProps, 'children'> {
   icon: React.ReactNode;
 }
 
-const IconButton: React.FC<IconButtonProps> = ({
+const IconButton: React.FC<IIconButtonProps> = ({
   onClick,
   type = 'button',
   classes = [],
