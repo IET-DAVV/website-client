@@ -6,7 +6,7 @@ import Image from 'next/image';
 import BubbleImage from '../assets/images/bubbble.png';
 
 const Home: NextPage = () => {
-  console.log('ksjdf');
+  console.log('ksjdf')
   return (
     <div className={styles.container}>
       <Head>
@@ -22,4 +22,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Home
