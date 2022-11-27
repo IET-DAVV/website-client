@@ -1,4 +1,4 @@
-import { IBaseTemplate } from '.';
+import { IBaseTemplate } from './';
 
 const base: IBaseTemplate = {
   sampleProp: 'sampleProp 1',
