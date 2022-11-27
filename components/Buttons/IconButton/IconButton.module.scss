@@ -1,0 +1,32 @@
+@import '../../../styles/commons.scss';
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  @extend .flexRow;
+  border-radius: 50%;
+  padding: 0.4rem;
+  max-height: 2.7rem;
+  min-height: 2.7rem;
+  max-width: 2.7rem;
+  min-width: 2.7rem;
+}
+.primary {
+  background-color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+}
+.secondary {
+  border: 2px solid var(--clr-primary);
+}
+.tertiary {
+  border: none;
+  border: 2px solid transparent;
+}
+.icon {
+  width: 2rem;
+  @extend .flexRow;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
