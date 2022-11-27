@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import IconButton, { IIconButtonProps } from '.';
-import { mockIconButtonTemplateProps } from './IconButton.mocks';
+import mockIconButtonTemplateProps from './IconButton.mocks';
 
 export default {
   title: 'Components/Buttons/IconButton',

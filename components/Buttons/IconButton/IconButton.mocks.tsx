@@ -1,5 +1,5 @@
+import { IIconButtonProps } from '.';
 import { icons } from '../../../assets';
-import { IIconButtonProps } from '../interfaces';
 
 const { discord } = icons;
 
@@ -23,8 +23,4 @@ const tertiary: IIconButtonProps = {
   variant: 'tertiary',
 };
 
-export const mockIconButtonTemplateProps = {
-  primary,
-  secondary,
-  tertiary,
-};
+export default { primary, secondary, tertiary };

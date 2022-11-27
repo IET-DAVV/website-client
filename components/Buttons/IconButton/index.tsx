@@ -19,6 +19,7 @@ const IconButton: React.FC<IIconButtonProps> = ({
   return (
     <button
       onClick={onClick}
+      // eslint-disable-next-line react/button-has-type
       type={type}
       className={clsx(
         styles.button,

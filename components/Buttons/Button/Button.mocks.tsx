@@ -1,5 +1,6 @@
+import { IButtonWithTextAndIconProps } from '.';
 import { icons } from '../../../assets';
-import { IButtonWithTextAndIconProps } from '../interfaces';
+
 const { discord } = icons;
 
 const withoutIcon: IButtonWithTextAndIconProps = {
@@ -17,7 +18,4 @@ const withIcon: IButtonWithTextAndIconProps = {
   variant: 'primary',
 };
 
-export const mockButtonTemplateProps = {
-  withoutIcon,
-  withIcon,
-};
+export default { withoutIcon, withIcon };

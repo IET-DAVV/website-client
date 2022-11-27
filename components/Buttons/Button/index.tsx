@@ -9,6 +9,17 @@ export interface IButtonWithTextAndIconProps extends IBasicButtonProps {
   iconPlacement?: 'left' | 'right';
 }
 
+function getIconPlacementClass(iconPlacement: 'left' | 'right') {
+  switch (iconPlacement) {
+    case 'left':
+      return styles.left;
+    case 'right':
+      return styles.right;
+    default:
+      return styles.left;
+  }
+}
+
 const Button: React.FC<IButtonWithTextAndIconProps> = ({
   onClick,
   children,
@@ -19,16 +30,16 @@ const Button: React.FC<IButtonWithTextAndIconProps> = ({
   iconPlacement = 'left',
   ...rest
 }) => {
-  console.log({ test: classes, rest, icon });
   return (
     <button
       onClick={onClick}
+      // eslint-disable-next-line react/button-has-type
       type={type}
       className={clsx(
         styles.button,
         getClassBasedOnVariant(styles, variant),
         icon ? styles.textIconButton : styles.textButton,
-        icon ? (iconPlacement === 'right' ? styles.right : styles.left) : '',
+        icon ? getIconPlacementClass(iconPlacement) : '',
         ...classes
       )}
       {...rest}
