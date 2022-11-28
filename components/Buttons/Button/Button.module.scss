@@ -1,4 +1,4 @@
-@import '../../styles/commons.scss';
+@import '../../../styles/commons.scss';
 
 .button {
   cursor: pointer;
@@ -18,24 +18,22 @@
       flex-direction: row-reverse;
     }
   }
-  &.iconButton {
-    border-radius: 50%;
-    padding: 0;
-    max-height: 2.7rem;
-    min-height: 2.7rem;
-    max-width: 2.7rem;
-    min-width: 2.7rem;
-  }
 }
 .primary {
   background-color: var(--clr-primary);
   border: 2px solid var(--clr-primary);
+  color: var(--clr-primary-light);
 }
 .secondary {
   border: 2px solid var(--clr-primary);
+  color: var(--clr-primary);
 }
 .tertiary {
   border: none;
+  color: var(--clr-primary);
+  padding: 0;
+  min-height: unset;
+  max-height: unset;
 }
 .icon {
   width: 2rem;

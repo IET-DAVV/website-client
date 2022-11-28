@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState } from 'react';
 
 interface AppContextInterface {
   loading: boolean;
@@ -21,6 +21,7 @@ export const GlobalContextProvider: React.FC<GlobalContextProviderProps> = ({
 
   return (
     <GlobalContext.Provider
+      // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         loading,
         setLoading,

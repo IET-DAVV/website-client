@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface Props {
   value: string;
@@ -6,16 +6,13 @@ interface Props {
   placeholder?: string;
 }
 
-const TextField: React.FC<Props> = ({ value, onChange, placeholder }) => {
-  function handleSomething() {}
-  return (
-    <input
-      type="text"
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-    />
-  );
-};
+const TextField: React.FC<Props> = ({ value, onChange, placeholder = '' }) => (
+  <input
+    type="text"
+    placeholder={placeholder}
+    value={value}
+    onChange={onChange}
+  />
+);
 
 export default TextField;

@@ -1,7 +1,8 @@
-import AlertContextProvider from "../utils/contexts/AlertContext";
-import '../styles/globals.scss'
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
+import '../styles/globals.scss';
+import AlertContextProvider from '../utils/contexts/AlertContext';
 
+// eslint-disable-next-line react/function-component-definition
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AlertContextProvider>

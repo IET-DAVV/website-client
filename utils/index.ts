@@ -1,1 +1,1 @@
-export const TEMP = 'TEMP';
+export * from './contexts/GlobalContext';
