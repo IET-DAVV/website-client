@@ -6,6 +6,7 @@
   @extend .flexRow;
   max-height: 3.3rem;
   min-height: 3.3rem;
+  height: 3.3rem;
   &.textButton {
   }
   padding: 1rem 1.2rem;
@@ -19,24 +20,28 @@
     }
   }
 }
-.primary {
+.filled {
   background-color: var(--clr-primary);
   border: 2px solid var(--clr-primary);
   color: var(--clr-primary-light);
 }
-.secondary {
+.outlined {
   border: 2px solid var(--clr-primary);
   color: var(--clr-primary);
 }
-.tertiary {
+.text {
   border: none;
   color: var(--clr-primary);
   padding: 0;
   min-height: unset;
   max-height: unset;
+  height: unset;
 }
 .icon {
   width: 2rem;
+  max-height: 2rem;
+  min-height: 2rem;
+  position: relative;
   @extend .flexRow;
   img {
     width: 100%;

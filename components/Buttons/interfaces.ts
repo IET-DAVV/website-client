@@ -3,5 +3,5 @@ export interface IBasicButtonProps
   children: React.ReactNode;
   type?: 'button' | 'submit' | 'reset';
   classes?: string[];
-  variant?: 'primary' | 'secondary' | 'tertiary';
+  variant?: 'filled' | 'outlined' | 'text';
 }

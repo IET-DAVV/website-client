@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { IButtonWithTextAndIconProps } from '.';
 import { icons } from '../../../assets';
 
@@ -7,15 +8,15 @@ const withoutIcon: IButtonWithTextAndIconProps = {
   children: 'Click Me',
   onClick: () => {},
   type: 'button',
-  variant: 'primary',
+  variant: 'filled',
 };
 const withIcon: IButtonWithTextAndIconProps = {
   children: 'Click Me',
-  icon: <img src={discord} alt="This is discord" />,
+  icon: <Image layout="fill" src={discord} alt="This is discord" />,
   iconPlacement: 'left',
   onClick: () => {},
   type: 'button',
-  variant: 'primary',
+  variant: 'filled',
 };
 
 export default { withoutIcon, withIcon };

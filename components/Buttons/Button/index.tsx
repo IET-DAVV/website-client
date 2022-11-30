@@ -25,7 +25,7 @@ const Button: React.FC<IButtonWithTextAndIconProps> = ({
   children,
   type = 'button',
   classes = [],
-  variant = 'primary',
+  variant = 'filled',
   icon = null,
   iconPlacement = 'left',
   ...rest

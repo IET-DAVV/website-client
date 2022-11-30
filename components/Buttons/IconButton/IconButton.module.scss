@@ -11,18 +11,21 @@
   max-width: 2.7rem;
   min-width: 2.7rem;
 }
-.primary {
+.filled {
   background-color: var(--clr-primary);
   border: 2px solid var(--clr-primary);
 }
-.secondary {
+.outlined {
   border: 2px solid var(--clr-primary);
 }
-.tertiary {
+.text {
   border: none;
   border: 2px solid transparent;
 }
 .icon {
+  position: relative;
+  max-height: 2rem;
+  min-height: 2rem;
   width: 2rem;
   @extend .flexRow;
   img {
