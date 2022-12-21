@@ -14,7 +14,7 @@ interface IAlert {
   id: string;
   message: string;
   autoClose: boolean;
-  type: string;
+  type: "warning"|"error"|"success";
 }
 
 const AlertContextProvider: React.FC<AlertContextProviderProps> = ({
