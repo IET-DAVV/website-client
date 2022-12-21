@@ -12,7 +12,7 @@ const IconButton: React.FC<IIconButtonProps> = ({
   onClick,
   type = 'button',
   classes = [],
-  variant = 'primary',
+  variant = 'filled',
   icon = null,
   ...rest
 }) => {

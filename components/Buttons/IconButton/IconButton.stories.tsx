@@ -14,5 +14,5 @@ const Template: ComponentStory<typeof IconButton> = (args) => (
 
 export const Basic = Template.bind({});
 Basic.args = {
-  ...mockIconButtonTemplateProps.primary,
+  ...mockIconButtonTemplateProps.filled,
 } as IIconButtonProps;

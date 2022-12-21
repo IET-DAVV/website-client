@@ -1,26 +1,27 @@
+import Image from 'next/image';
 import { IIconButtonProps } from '.';
 import { icons } from '../../../assets';
 
 const { discord } = icons;
 
-const primary: IIconButtonProps = {
-  icon: <img src={discord} alt="This is discord" />,
+const filled: IIconButtonProps = {
+  icon: <Image layout="fill" src={discord} alt="This is discord" />,
   onClick: () => {},
   type: 'button',
-  variant: 'primary',
+  variant: 'filled',
 };
 
-const secondary: IIconButtonProps = {
-  icon: <img src={discord} alt="This is discord" />,
+const outlined: IIconButtonProps = {
+  icon: <Image layout="fill" src={discord} alt="This is discord" />,
   onClick: () => {},
   type: 'button',
-  variant: 'secondary',
+  variant: 'outlined',
 };
-const tertiary: IIconButtonProps = {
-  icon: <img src={discord} alt="This is discord" />,
+const text: IIconButtonProps = {
+  icon: <Image layout="fill" src={discord} alt="This is discord" />,
   onClick: () => {},
   type: 'button',
-  variant: 'tertiary',
+  variant: 'text',
 };
 
-export default { primary, secondary, tertiary };
+export default { filled, outlined, text };

@@ -1,12 +1,12 @@
 function getClassBasedOnVariant(
   styles: any,
-  variant: 'primary' | 'secondary' | 'tertiary'
+  variant: 'filled' | 'outlined' | 'text'
 ) {
   // Refer to the variant property in the BasicButtonProps interface
   const variantClass = {
-    primary: styles.primary,
-    secondary: styles.secondary,
-    tertiary: styles.tertiary,
+    filled: styles.filled,
+    outlined: styles.outlined,
+    text: styles.text,
   };
   return variantClass[variant];
 }
