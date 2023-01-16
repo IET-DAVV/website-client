@@ -12,6 +12,7 @@ const Home: NextPage = () => (
 
     <main className={styles.main}>
       <h1>IET DAVV Website</h1>
+      <h2 className="hello">hello</h2>
     </main>
   </div>
 );
