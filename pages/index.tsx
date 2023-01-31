@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Recruiters from '../components';
 import styles from './Home.module.scss';
 
 const Home: NextPage = () => (
@@ -14,6 +15,7 @@ const Home: NextPage = () => (
       <h1>IET DAVV Website</h1>
       <h2 className="hello">hello</h2>
     </main>
+    <Recruiters />
   </div>
 );
 
