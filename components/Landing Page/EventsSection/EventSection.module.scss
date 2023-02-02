@@ -1,0 +1,74 @@
+@import '../../../styles/commons.scss';
+
+.event_section {
+  @extend .flexRow;
+  height: 100vh;
+  background-color: black;
+  color: white;
+
+  .left_section,
+  .right_section {
+    height: 100%;
+    width: 50%;
+  }
+
+  .left_section {
+    position: relative;
+    @extend .flexCol;
+    h1 {
+      font-family: serif;
+    }
+    .college_name {
+      position: absolute;
+      top: 33%;
+      left: 20%;
+      color: #ffffff80;
+    }
+  }
+
+  .right_section {
+    @extend .flexRow;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    .column_one,
+    .column_two,
+    .column_three {
+      overflow: hidden;
+      position: absolute;
+      @extend .flexCol;
+      width: 35%;
+      height: 100vh;
+      gap: 15px;
+      .halfcard {
+        height: 50%;
+        width: 100%;
+        background-color: #ffffff30;
+        border-radius: 20px;
+      }
+      .card {
+        height: 550px;
+        width: 100%;
+        background-color: #ffffff30;
+        border-radius: 20px;
+        span {
+          height: 100% !important;
+          width: 100% !important;
+        }
+      }
+      top: 0;
+      left: 0;
+    }
+    .column_one {
+      top: 80px;
+      left: 4%;
+    }
+    .column_two {
+      top: -80px;
+      left: 42%;
+    }
+    .column_three {
+      left: 80%;
+    }
+  }
+}
