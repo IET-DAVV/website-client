@@ -15,7 +15,7 @@ const Home: NextPage = () => (
       <h1>IET DAVV Website</h1>
       <h2 className="hello">hello</h2>
     </main>
-    <Recruiters />
+    <Recruiters variant="var1" />
   </div>
 );
 
