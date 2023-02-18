@@ -10,7 +10,7 @@ export interface RecruiterProps {
   variant: 'var1'| 'var2'
 }
 
-    const settings = {
+       const settings = {
       dots: false,
       infinite: true,
       slidesToShow: 5,
@@ -30,7 +30,7 @@ export interface RecruiterProps {
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 650,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -38,11 +38,20 @@ export interface RecruiterProps {
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          },
+          
+        },
+          {
+          breakpoint: 380,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
-          }
+          },
+          
         }
       ]
     };
