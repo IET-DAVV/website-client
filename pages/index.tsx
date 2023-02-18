@@ -2,6 +2,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from './Home.module.scss';
 
+import AcademicProgramsSection from '../components/AcademicProgramsSection';
+
 const Home: NextPage = () => (
   <div className={styles.container}>
     <Head>
@@ -14,6 +16,8 @@ const Home: NextPage = () => (
       <h1>IET DAVV Website</h1>
       <h2 className="hello">hello</h2>
     </main>
+
+    <AcademicProgramsSection />
   </div>
 );
 
