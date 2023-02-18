@@ -1,4 +1,4 @@
-//Importing Icons
+//  Importing Icons
 import ArrowCircleLeft from './icons/ArrowCircleLeft.svg';
 
 import ArrowCircleRight from './icons/ArrowCircleRight.svg';
