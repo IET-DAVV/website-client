@@ -18,13 +18,21 @@ const AcademicProgramsSection = () => {
             Bachelor
           </button>
         </li>
-        <li className={filter === 'masters' ? `${styles.highlight}` : ''}>
-          <button type="button" onClick={() => setFilter('masters')}>
+        <li>
+          <button
+            className={filter === 'masters' ? `${styles.highlight}` : ''}
+            type="button"
+            onClick={() => setFilter('masters')}
+          >
             Masters
           </button>
         </li>
-        <li className={filter === 'phd' ? `${styles.highlight}` : ''}>
-          <button type="button" onClick={() => setFilter('phd')}>
+        <li>
+          <button
+            className={filter === 'phd' ? `${styles.highlight}` : ''}
+            type="button"
+            onClick={() => setFilter('phd')}
+          >
             PhD
           </button>
         </li>
