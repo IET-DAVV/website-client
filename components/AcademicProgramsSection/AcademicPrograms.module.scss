@@ -47,7 +47,6 @@
   }
 
   .academicTags {
-    font-family: 'Poppins', sans-serif;
     list-style: none;
     display: flex;
     margin-top: 1.8rem;
@@ -57,9 +56,11 @@
     font-weight: 500;
 
     & li {
+      font-family: 'Poppins', sans-serif;
       cursor: pointer;
       font-size: 1.2rem;
       & button {
+        font-family: inherit;
         background-color: transparent;
         outline: none;
         border: 0;
