@@ -16,9 +16,9 @@ export interface RecruiterProps {
       slidesToShow: 5,
       slideToScroll:1,
       autoplay: true,
-      speed: 500,
+      speed: 2000,
       initialSlide:0,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 2000,
       cssEase: "linear",
       responsive: [
         {
