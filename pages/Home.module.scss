@@ -1,9 +1,13 @@
 @import '../styles/commons.scss';
 
 .main {
-  @extend .flexCol;
+  background: url('https://imgs.search.brave.com/79vDWLIqCN_Duf1OjSfbs-LErXsibtfkrOT38jjF_YY/rs:fit:800:492:1/g:ce/aHR0cDovL3d3dy5p/ZXRkYXZ2LmVkdS5p/bi9pbWFnZXMvMjgy/OTVfSUVUX05ldy5q/cGc');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-x: hidden;
 }
 .container {
   overflow-x: hidden;
