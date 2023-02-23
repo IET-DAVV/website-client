@@ -12,7 +12,11 @@ export default () => {
     <div className={styles.outerDiv}>
       <div className={styles.innerDiv}>
         <div className={styles.welcome}>
-         <div><Image src={line}/>WELCOME TO</div>
+         <div className={styles.line}>
+          <Image src={line}/>
+         <p>WELCOME TO
+         </p>
+         </div>
         </div>
         <div className={styles.iet}>IET-DAVV</div>
         <p className={styles.desc}>
