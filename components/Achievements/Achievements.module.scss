@@ -1,13 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Manrope');
-@font-face {
-  font-family: NewYork;
-  src: url(../../styles/NewYork.otf);
-}
 .group3664 {
-  width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
-  overflow-y: visible;
+  min-height: 100vh;
   .heading {
     display: flex;
     padding-left: 4%;
@@ -20,7 +13,7 @@
       font-weight: 410;
       letter-spacing: 0.05em;
       color: #33453b;
-      font-size: 5rem;
+      font-size: clamp(1.8rem, 0.8rem + 4.5vw, 5rem);
       text-transform: uppercase;
     }
   }
@@ -29,9 +22,8 @@
     display: flex !important;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding-right: 0px;
     .btn {
-      flex-basis: 5vw;
       align-self: center;
       button {
         background-color: #3b7a9e;
@@ -46,87 +38,104 @@
     .slider {
       max-width: 100vw;
       width: 100%;
-      margin: 10px;
       overflow: hidden;
       .group3646 {
         background-color: #3b7a9e;
         display: flex !important;
-        justify-content: center;
+        @media (max-width: 899px) {
+          flex-direction: column;
+        }
+        @media (min-width: 900px) {
+          flex-direction: row;
+        }
+        justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         .achievementinfo {
           display: flex !important;
           flex-direction: column;
           align-items: flex-start;
-          flex-grow: 1;
-          flex-shrink: 0;
-          flex-basis: 0;
-          margin: 30px;
-          margin-left: 20px;
-          padding: 10px;
+          flex: 1;
+          margin: 1rem;
+          margin-left: 1.5rem;
+          padding: 0.1rem;
           justify-content: space-between;
           color: #f9f6ff;
-          #year {
-            p {
-              text-transform: uppercase;
-              background: #f9f6ff;
-              border-radius: 40px;
-              padding-top: 2px;
-              padding-bottom: 2px;
-              padding-right: 20px;
-              padding-left: 20px;
-              text-align: center;
-              font-family: 'Manrope';
-              font-style: normal;
-              font-weight: 500;
-              font-size: 1rem;
-              letter-spacing: 0.05em;
-              color: #3b7a9e;
-            }
+          .year {
+            text-transform: uppercase;
+            background: #f9f6ff;
+            border-radius: 40px;
+            padding: 0.1rem 2rem;
+            text-align: center;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            color: #3b7a9e;
           }
-          #title {
-            p {
-              text-transform: uppercase;
-              height: auto;
-              font-family: 'Manrope';
-              font-style: normal;
-              font-weight: 700;
-              font-size: 2.2rem;
-              word-break: keep-all;
-              line-height: 2em;
-              letter-spacing: 0.05em;
-              color: #f9f6ff;
+          .title {
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+            height: auto;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.2rem;
+            word-break: keep-all;
+            @media (max-width: 1050px) {
+              line-height: 1.6em;
             }
-          }
-          #desc {
-            margin-top: 2em;
-            p {
-              height: auto;
-              word-break: keep-all;
-              font-family: 'Manrope';
-              font-style: normal;
-              font-weight: 400;
-              font-size: 1.4rem;
+            @media (min-width: 1050px) {
               line-height: 2em;
-              color: #f9f6ff;
+            }
+            letter-spacing: 0.05em;
+            color: #f9f6ff;
+          }
+          .desc {
+            margin-top: 2.6rem;
+            word-break: keep-all;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4rem;
+            @media (max-width: 1050px) {
+              line-height: 1.6em;
+            }
+            @media (min-width: 1050px) {
+              line-height: 2em;
+            }
+            color: #f9f6ff;
+          }
+          .descEllipsis {
+            @media (max-width: 1050px) {
+              text-overflow: ellipsis;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 5;
+              -webkit-box-orient: vertical;
             }
           }
         }
         .image120 {
-          margin: 30px;
-          width: fit-content;
+          @media (max-width: 899px) {
+            margin: 0.2rem;
+            padding: 1rem 0rem;
+          }
+          @media (min-width: 900px) {
+            padding: 7rem 1rem 7rem 5rem;
+          }
           flex-grow: 2;
           flex-basis: 0;
-          flex-shrink: 0;
+          flex-shrink: 2;
 
           .Image {
-            border-radius: 15px !important;
+            border-radius: 1rem !important;
           }
         }
       }
     }
     .btnright {
-      flex-basis: 5vw;
       align-self: center;
       button {
         text-decoration: none;
