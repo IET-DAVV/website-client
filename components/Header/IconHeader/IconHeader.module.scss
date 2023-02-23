@@ -1,0 +1,144 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 6rem;
+  background-color: transparent;
+  z-index: 40;
+  position: fixed;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 1rem;
+  width: 35%;
+}
+
+.institute {
+  font-size: 1.25rem;
+  max-width: 60%;
+  font-weight: 600;
+  color: #000;
+}
+
+.links,
+.mobile_links {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 55%;
+}
+.link,
+.mobile_link {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+.inner {
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.dropd,
+.mobile_dropd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.corner,
+.mobile_corner {
+  border-bottom: 3px;
+  border-bottom-color: #000;
+  border-bottom-style: solid;
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+.mobile_open {
+  display: none;
+}
+
+@media screen and (max-width: 1330px) {
+  .logo {
+    width: 37%;
+    padding: 0;
+  }
+  .institute {
+    font-size: 1rem;
+    max-width: 60%;
+  }
+  .links,
+  .mobile_links {
+    width: 80%;
+  }
+  .link,
+  .mobile_link {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .mobile_open {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: transparent;
+    z-index: 40;
+    margin-right: 0.25rem;
+    position: relative;
+    margin-left: -5rem;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin-top: 16rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+  .link {
+    margin-top: 0.5rem;
+  }
+  .corner {
+    margin-top: 0.5rem;
+  }
+  .mobile_links,
+  .mobile_corner,
+  .mobile_dropd,
+  .mobile_link {
+    margin-left: -150vw;
+  }
+  .dropd {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .logo {
+    width: 70%;
+  }
+  .institute {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-left: 1rem;
+  }
+}
