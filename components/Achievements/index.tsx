@@ -40,7 +40,7 @@ const Achievement: React.FC<AchievementProps> = ({ sampleProp }) => {
   const sliderRef = useRef<Slider>(null);
   const handleNext = () => {
     sliderRef.current?.slickNext();
-    //Achievements.length is the size of our array, do not forgot to mention the size of array
+    //  Achievements.length is the size of our array, do not forgot to mention the size of array
     setCurrentSlideIndex((currentSlideIndex + 1) % Achievements.length);
   };
   const handlePrev = () => {
@@ -70,7 +70,7 @@ const Achievement: React.FC<AchievementProps> = ({ sampleProp }) => {
       );
     };
     return (
-      <div className={styles.group3646} key={i}>
+      <div className={styles.group3646} key={slide.url}>
         <div className={styles.achievementinfo}>
           <p className={styles.year}>{slide.year}</p>
           <p className={styles.title}>{slide.title}</p>
