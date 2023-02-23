@@ -1,0 +1,35 @@
+@import '../../../styles/commons.scss';
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  @extend .flexRow;
+  border-radius: 50%;
+  padding: 0.4rem;
+  max-height: 2.7rem;
+  min-height: 2.7rem;
+  max-width: 2.7rem;
+  min-width: 2.7rem;
+}
+.filled {
+  background-color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+}
+.outlined {
+  border: 2px solid var(--clr-primary);
+}
+.text {
+  border: none;
+  border: 2px solid transparent;
+}
+.icon {
+  position: relative;
+  max-height: 2rem;
+  min-height: 2rem;
+  width: 2rem;
+  @extend .flexRow;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

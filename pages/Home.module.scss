@@ -1,7 +1,10 @@
-@import "../styles/commons.scss";
+@import '../styles/commons.scss';
 
 .main {
-  @extend .flexRow;
+  @extend .flexCol;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+}
+.container {
+  overflow-x: hidden;
 }
