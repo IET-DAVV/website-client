@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import {Recruiters} from '../components';
+import { Recruiters } from '../components';
 import Achievements from '../components/Achievements';
+import Hero from '../components/herosection/Herosection';
 import styles from './Home.module.scss';
-import  Hero from '../components/herosection/Herosection'
 
 const Home: NextPage = () => (
   <div className={styles.container}>
@@ -16,8 +16,6 @@ const Home: NextPage = () => (
       <h1>IET DAVV Website</h1>
       <h2 className="hello">hello</h2>
       <Hero />
-      
-      
     </main>
     <Recruiters variant="var1" />
     <Achievements sampleProp="" />
