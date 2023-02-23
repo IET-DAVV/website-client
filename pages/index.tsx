@@ -1,9 +1,6 @@
 import type { NextPage } from 'next';
-
 import Head from 'next/head';
-
 import Achievements from '../components/Achievements';
-
 import styles from './Home.module.scss';
 
 const Home: NextPage = () => (
