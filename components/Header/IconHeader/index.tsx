@@ -24,9 +24,10 @@ const IconHeader = () => {
               href={item.href}
               className={open ? styles.link : styles.mobile_link}
             >
-              {/* <a href="#" className={open ? styles.link : styles.mobile_link}> */}
-              {item.name}
-              {/* </a> */}
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+              <a href="/#" className={open ? styles.link : styles.mobile_link}>
+                {item.name}
+              </a>
             </Link>
           </div>
         ))}

@@ -50,9 +50,10 @@ const TopBar = () => {
     <div className={styles.top}>
       <div className={styles.part1}>
         <Link href="/" className={styles.link}>
-          {/* <a href="#" className={styles.link}> */}
-          1234@ietdavv.edu.in
-          {/* </a> */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages, jsx-a11y/anchor-is-valid */}
+          <a href="#" className={styles.link}>
+            1234@ietdavv.edu.in
+          </a>
         </Link>
         <p className={styles.set}>+0731-2455856</p>
       </div>

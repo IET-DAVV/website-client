@@ -19,8 +19,6 @@ const Home: NextPage = () => (
     </header>
 
     <main className={styles.main}>
-      <h1>IET DAVV Website</h1>
-      <h2 className="hello">hello</h2>
       <Hero />
     </main>
     <Recruiters variant="var1" />
