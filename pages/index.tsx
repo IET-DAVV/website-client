@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
-
 import Head from 'next/head';
-
+import {Recruiters} from '../components';
 import Achievements from '../components/Achievements';
-
 import styles from './Home.module.scss';
 import  Hero from '../components/herosection/Herosection'
 
@@ -21,7 +19,7 @@ const Home: NextPage = () => (
       
       
     </main>
-    
+    <Recruiters variant="var1" />
     <Achievements sampleProp="" />
   </div>
 );
