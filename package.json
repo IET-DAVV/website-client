@@ -17,12 +17,9 @@
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-<<<<<<< HEAD
-    "storybook": "^6.5.15"
-=======
+    "storybook": "^6.5.15",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
->>>>>>> 185ff58677019d3dd045a168b702f3d7970ee62f
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",

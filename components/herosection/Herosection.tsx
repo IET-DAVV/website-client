@@ -7,7 +7,7 @@ const IMG_URL =
 
 const { outerDiv, innerDiv, img22 } = styles;
 const { arrowCircleRight,line } = icons;
-export default () => {
+const Herosection= () => {
   return (
     <div className={styles.outerDiv}>
       <div className={styles.innerDiv}>

@@ -21,11 +21,8 @@ const Home: NextPage = () => (
       
       
     </main>
-<<<<<<< HEAD
     
-=======
     <Achievements sampleProp="" />
->>>>>>> 185ff58677019d3dd045a168b702f3d7970ee62f
   </div>
 );
 
