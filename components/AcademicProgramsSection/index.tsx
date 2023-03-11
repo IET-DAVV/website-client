@@ -4,12 +4,55 @@ import Image from 'next/image';
 import arrowRight from '../../assets/icons/arrowRight.svg';
 import styles from './AcademicPrograms.module.scss';
 
+type CourseDataType = {
+  [k: string]: string[];
+}
+
+const courseData: CourseDataType = {
+  bachelor: [
+    'Computer Engineering',
+    'Electronics & Instrumentation',
+    'Electronics & Telecommunication',
+    'Information Technology',
+    'Mechanical Engineering',
+    'Civil Engineering',
+  ],
+  masters: [
+    'Computer Engineering with specialization in Software Engineering',
+    'Information Technology with specialization in Information Security',
+    'Electronics engineering with specialization in Digital Instrumentation',
+    'Electronics engineering with specialization in Digital Communication',
+    'Industrial Engineering & Management',
+    'Mechanical Engineering with specialization in Design & Thermal Engineering',
+  ]
+}
+
 const AcademicProgramsSection = () => {
+
   const [filter, setFilter] = useState('bachelor');
+
+  let courseTagName = '';
+
+  switch (filter) {
+    case 'masters':
+      courseTagName = 'masters'
+      break;
+    case 'phd':
+      courseTagName = 'phd'
+      break;
+    default:
+      courseTagName = 'bachelor'
+      break;
+  }
+
+  function data(course: keyof CourseDataType) {
+    return courseData[course];
+  }
 
   return (
     <div className={styles.academicSection}>
       <h1 className={styles.sectionTitle}>ACADEMIC PROGRAMS</h1>
+
       <ul className={styles.academicTags}>
         <li>
           <button
@@ -40,231 +83,41 @@ const AcademicProgramsSection = () => {
         </li>
       </ul>
 
-      {filter === 'bachelor' && (
-        <div className={styles.Grid}>
-          <div className={styles.card}>
-            <div className={`${styles.cardTitle}`}>
-              <h2>Computer Engineering</h2>
-              <span className={` ${styles.arrowIcon}`}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
+      <div className={styles.Grid}>
+        {
+          data(filter)?.map((name: string) => {
+            return (
+              <div key={name} className={styles.card}>
+                <div className={`${styles.cardTitle}`}>
+                  <h2>{name}</h2>
+                  <span className={` ${styles.arrowIcon}`}>
+                    <Image
+                      src={arrowRight}
+                      alt="arrow right"
+                      width={30}
+                      height={30}
+                    />
+                  </span>
+                </div>
 
-            <div className={`${styles.badge}`}>Bachelor</div>
-          </div>
+                <div className={`${styles.badge}`}>{courseTagName}</div>
+              </div>
+            )
+          })
+        }
 
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>Electronics & Instrumentation</h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Bachelor</div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>Electronics & Telecommunication</h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Bachelor</div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>Information Technology</h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Bachelor</div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>Mechanical Engineering</h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Bachelor</div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>Civil Engineering</h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Bachelor</div>
-          </div>
-        </div>
-      )}
-
-      {filter === 'masters' && (
-        <div className={styles.Grid}>
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>
-                Computer Engineering with specialization in Software Engineering
-              </h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Masters</div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>
-                Information Technology with specialization in Information
-                Security
-              </h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Masters</div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>
-                Electronics engineering with specialization in Digital
-                Instrumentation
-              </h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Masters</div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>
-                Electronics engineering with specialization in Digital
-                Communication
-              </h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Masters</div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>Industrial Engineering & Management</h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Masters</div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>
-              <h2>
-                Mechanical Engineering with specialization in Design & Thermal
-                Engineering
-              </h2>
-              <span className={styles.arrowIcon}>
-                <Image
-                  src={arrowRight}
-                  alt="arrow right"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-
-            <div className={styles.badge}>Masters</div>
-          </div>
-        </div>
-      )}
-
-      {filter === 'phd' && (
-        <div className={styles.Grid}>
-          <h2 className={styles.phdCard}>
-            PhD programme is also offered in all disciplines of BE/ME Programmes
-            & all relevant areas of interest. Research component of IET is also
-            strong while a number of research scholars from other reputed
-            organizations such as SGSITS, AICTE, RRCAT, NRCS, IIITA, etc. have
-            registered for PhD programme in various departments of IET.
-          </h2>
-        </div>
-      )}
+        {
+          courseTagName === 'phd' && (
+            <h2 className={styles.phdCard}>
+              PhD programme is also offered in all disciplines of BE/ME Programmes
+              & all relevant areas of interest. Research component of IET is also
+              strong while a number of research scholars from other reputed
+              organizations such as SGSITS, AICTE, RRCAT, NRCS, IIITA, etc. have
+              registered for PhD programme in various departments of IET.
+            </h2>
+          )
+        }
+      </div>
     </div>
   );
 };
